@@ -130,6 +130,10 @@ cscript //Nologo "%LINK_SCRIPT%" "%USERPROFILE%\Desktop\babun.lnk" "%BABUN_HOME%
 ECHO [babun] Babun installed successfully. You can delete the installer now.
 ECHO [babun] Enjoy! @tombujok
 
+if "%NORUN%"=="" (
+    goto :END
+)
+
 :RUN
 ECHO [babun] Starting babun
 "%BABUN_HOME%"\babun.bat || goto :ERROR
